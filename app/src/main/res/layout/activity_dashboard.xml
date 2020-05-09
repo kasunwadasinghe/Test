@@ -1,0 +1,28 @@
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#082742"
+    android:paddingHorizontal="50dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainDashboard">
+
+    <Button
+        android:id="@+id/btnAddActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#197ACF"
+        android:layout_marginVertical="20dp"
+        android:textColor="#fff"
+        android:text="Add Activity" />
+
+    <Button
+        android:id="@+id/btnViewActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:background="#197ACF"
+        android:textColor="#fff"
+        android:text="View Activity" />
+</LinearLayout>

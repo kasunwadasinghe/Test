@@ -1,0 +1,164 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="Activity Deatils"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="30sp"
+            android:textStyle="normal"/>
+
+        <EditText
+            android:id="@+id/txtActivityName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:text=""
+            android:hint="* Activity Name"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/dateActivityDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:datePickerMode="calendar"
+                android:hint="* Select Activity Date"
+                android:ems="10"
+                android:layout_marginEnd="50dp"/>
+
+            <Button
+                android:id="@+id/btnCalendar"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="-50dp"
+                android:background="@drawable/ic_action_date"></Button>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/timeActivityTime"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:timePickerMode="clock"
+                android:hint="Select Time of Attending"
+                android:ems="10"
+                android:layout_marginEnd="50dp"/>
+            <Button
+                android:id="@+id/btnTime"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="-50dp"
+                android:background="@drawable/ic_action_time"></Button>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="Address"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="30sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/txtAddress1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Address Lane 01"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtAddress2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Address Lane 02"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtCity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="City"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/txtCountry"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Country"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/txtReporter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="* Name Of The Report"
+            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_marginHorizontal="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="5dp"
+                android:background="#009688"
+                android:src="@drawable/ic_save"/>
+
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#9C27B0"
+                android:src="@drawable/ic_delete"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#9C27B0"
+                android:text="Back"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
