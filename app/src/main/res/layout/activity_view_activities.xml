@@ -1,39 +1,28 @@
-<ScrollView android:layout_height="match_parent"
+<LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ViewActivities">
+    tools:context=".ViewActivities"
+    android:orientation="vertical">
 
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </SearchView>
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:rowCount="1"
-            android:columnCount="5">
+        android:id="@+id/lstActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></ListView>
+<!--    <ListView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
-            <TextView
-                android:id="@+id/lblActivityName"
-                android:layout_column="0"
-                android:layout_row="0"></TextView>
-            <TextView
-                android:id="@+id/lblActivityDate"
-                android:layout_column="1"
-                android:layout_row="0"></TextView>
-            <TextView
-                android:id="@+id/lblActivityTime"
-                android:layout_column="2"
-                android:layout_row="0"></TextView>
-            <TextView
-                android:id="@+id/lblReporter"
-                android:layout_column="3"
-                android:layout_row="0"></TextView>
-        </GridLayout>
-    </ListView>
-</ScrollView>
+<!--    </ListView>-->
+</LinearLayout>
