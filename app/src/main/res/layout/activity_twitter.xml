@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".twitter"
-    android:background="@drawable/Twitter">
+    android:background="@drawable/twitter">
 
     <EditText
         android:id="@+id/editText"
@@ -18,11 +18,11 @@
         tools:layout_editor_absoluteY="556dp" />
 
     <Button
-        android:id="@+id/btnCalendar2"
+        android:id="@+id/btnTweet"
         android:layout_width="44dp"
         android:layout_height="45dp"
         android:layout_marginEnd="4dp"
         android:background="@mipmap/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="556dp"></Button>
+        tools:layout_editor_absoluteY="556dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,8 +16,12 @@ public class MainDashboard extends AppCompatActivity {
 
         Button viewActivity = (Button)findViewById(R.id.btnViewActivity);
         viewActivity.setOnClickListener(viewActivity_click);
+
         Button addActivity = (Button)findViewById(R.id.btnAddActivity);
         addActivity.setOnClickListener(addActivity_click);
+
+        Button tweetActivity = (Button)findViewById(R.id.btnTwitterActivity);
+        tweetActivity.setOnClickListener(tweetActivity_click);
     }
 
     private View.OnClickListener addActivity_click = new View.OnClickListener() {
@@ -36,4 +40,11 @@ public class MainDashboard extends AppCompatActivity {
         }
     };
 
+    private View.OnClickListener tweetActivity_click = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent tweetActivity = new Intent(MainDashboard.this, twitter.class);
+            startActivity(tweetActivity);
+        }
+    };
 }
