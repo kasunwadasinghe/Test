@@ -25,4 +25,33 @@
         android:background="#197ACF"
         android:textColor="#fff"
         android:text="View Activity" />
+
+    <Button
+        android:id="@+id/btnUploadActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:background="#197ACF"
+        android:text="Upload Image"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btnTwitterActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:background="#197ACF"
+        android:text="twitter"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btnTwitterActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:background="#197ACF"
+        android:text="Exit"
+        android:textColor="#fff" />
+
+
 </LinearLayout>
