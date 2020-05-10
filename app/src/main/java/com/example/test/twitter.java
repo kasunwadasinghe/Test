@@ -13,19 +13,19 @@ public class twitter extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_twitter);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_twitter);
 
-        EditText editText = findViewById(R.id.editText);
+            EditText editText = findViewById(R.id.editText);
 
-        Button btnTweet = findViewById(R.id.btnTweet);
-        btnTweet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tweetText = editText.getText().toString();
-                setTweet(tweetText);
-            }
-        });
+            Button btnTweet = findViewById(R.id.btnTweet);
+            btnTweet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tweetText = editText.getText().toString();
+                    setTweet(tweetText);
+                }
+            });
     }
 
     private void setTweet(String tweetText) {
