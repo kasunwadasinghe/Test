@@ -1,5 +1,6 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -7,8 +8,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="8dp"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         tools:context=".MainActivity">
 
         <TextView
@@ -128,11 +127,12 @@
             android:ems="10"
             android:hint="* Name Of The Report"
             android:textSize="18sp" />
+
         <LinearLayout
-            android:layout_marginHorizontal="5dp"
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
             android:orientation="vertical">
 
             <ImageButton
@@ -141,7 +141,7 @@
                 android:layout_height="56dp"
                 android:layout_marginBottom="5dp"
                 android:background="#009688"
-                android:src="@drawable/ic_save"/>
+                android:src="@drawable/ic_save" />
 
 
             <ImageButton
@@ -150,14 +150,14 @@
                 android:layout_height="0dp"
                 android:background="#9C27B0"
                 android:src="@drawable/ic_delete"
-                android:visibility="invisible"/>
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/btnBack"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:background="#9C27B0"
-                android:text="Back"/>
+                android:text="Back" />
         </LinearLayout>
     </LinearLayout>
 
