@@ -55,7 +55,7 @@ import java.util.UUID;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
-    ImageButton save,delete;
+    ImageButton save,delete,back;
     Button buttonDate,buttonTime;
     EditText activityName,address1,address2,city,country,reporter,activityDate,activityTime;
     ActivityDetails act;
@@ -110,14 +110,16 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         storageReference = storage.getReference();
 
         // on pressing btnSelect SelectImage() is called
-        btnSelect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                SelectImage();
-            }
-        });
+
+        btnSelect.setOnClickListener(select_click);
     }
+
+    private View.OnClickListener select_click=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            SelectImage();
+        }
+    };
 
     private View.OnClickListener save_click=new View.OnClickListener() {
         @Override
@@ -234,8 +236,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
     // Override onActivityResult method
     @Override
-    protected void onActivityResult(int requestCode,int resultCode,Intent data)
-    {
+    protected void onActivityResult(int requestCode,int resultCode,Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null&& data.getData() != null) {
@@ -343,37 +344,6 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                             progressDialog.dismiss();
                         }
                     });
-
-            // adding listeners on upload
-            // or failure of image
-//            ref.putFile(filePath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                 @Override
-//                 public void onSuccess(
-//                         UploadTask.TaskSnapshot taskSnapshot)
-//                 {
-//                     // Image uploaded successfully
-//                     // Dismiss dialog
-//                     progressDialog.dismiss();
-//                     Toast.makeText(MainActivity.this,"Image Uploaded!!",Toast.LENGTH_SHORT).show();
-//                 }
-//            }).addOnFailureListener(new OnFailureListener() {
-//                  @Override
-//                  public void onFailure(@NonNull Exception e)
-//                  {
-//                      // Error, Image not uploaded
-//                      progressDialog.dismiss();
-//                      Toast.makeText(MainActivity.this,"Failed " + e.getMessage(),Toast.LENGTH_SHORT).show();
-//                  }
-//            }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-//                     // Progress Listener for loading
-//                     // percentage on the dialog box
-//                     @Override
-//                     public void onProgress(UploadTask.TaskSnapshot taskSnapshot)
-//                     {
-//                         double progress = (100.0 * taskSnapshot.getBytesTransferred()/ taskSnapshot.getTotalByteCount());
-//                         progressDialog.setMessage( "Uploaded " + (int)progress + "%");
-//                     }
-//             });
         }
     }
 
