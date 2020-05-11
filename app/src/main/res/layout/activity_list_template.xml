@@ -2,24 +2,59 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/lblActivityName"
+    <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"></TextView>
-    <TextView
-        android:id="@+id/lblActivityDate"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"></TextView>
-    <TextView
-        android:id="@+id/lblActivityTime"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"></TextView>
-    <TextView
-        android:id="@+id/lblReporter"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"></TextView>
+        android:layout_height="match_parent"
+        app:rowCount="1"
+        app:columnCount="5"
+        android:padding="5dp">
 
+        <TextView
+            android:id="@+id/lblActivityName"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="20dp"
+            app:layout_column="0"
+            app:layout_row="0"></TextView>
+
+        <TextView
+            android:id="@+id/lblActivityDate"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="20dp"
+            app:layout_column="1"
+            app:layout_row="0"></TextView>
+
+        <TextView
+            android:id="@+id/lblActivityTime"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="20dp"
+            app:layout_column="2"
+            app:layout_row="0"></TextView>
+
+        <TextView
+            android:id="@+id/lblReporter"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="20dp"
+            app:layout_column="3"
+            app:layout_row="0"></TextView>
+
+        <ImageButton
+            android:id="@+id/btnDeleteActivity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_delete"
+            app:layout_column="4"
+            app:layout_row="0"></ImageButton>
+
+    </androidx.gridlayout.widget.GridLayout>
 
 </LinearLayout>
